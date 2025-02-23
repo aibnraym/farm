@@ -59,6 +59,7 @@ table {
     --orange:#E75D02;
     --black:#000000;
     --white:#ffffff;
+    --light-black: rgba(0,0,0,0.8);
 }
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
@@ -137,6 +138,7 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    /* position: relative; */
 }
 
 .Btn {
@@ -147,7 +149,6 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: ;
     
 }
 
@@ -160,9 +161,11 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
+    
     position: fixed;
-    top: 40.38em;
-    left: 87.7%;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 15px;
     z-index: 10;
     
 }
@@ -177,15 +180,135 @@ h3{
 #fruits p, #veggies p {
     line-height: 1.5;
     padding: 15px 15px;
+    margin-bottom: 15px;
 }
 
+#fruitsForSale, #veggiesForSale {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+    /* height: 4000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; */
+}
+
+.items {
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 300px;
+    /* grid-template-columns: 300px; */
+    grid-template-columns: repeat( 12 / 300px);
+    gap: 50px;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+/* Grid Items */
+.grid-item-1 { grid-row: 1 / 2; grid-column: 1 / 2;}
+.grid-item-2 { grid-row: 1 / 2; grid-column: 2 / 3;}
+.grid-item-3 { grid-row: 1 / 2; grid-column: 3 / 4;}
+.grid-item-4 { grid-row: 1 / 2; grid-column: 4 / 5;}
+.grid-item-5 { grid-row: 1 / 2; grid-column: 5 / 6;}
+.grid-item-6 { grid-row: 1 / 2; grid-column: 6 / 7;}
+.grid-item-7 { grid-row: 1 / 2; grid-column: 7 / 8;}
+.grid-item-8 { grid-row: 1 / 2; grid-column: 8 / 9;}
+.grid-item-9 { grid-row: 1 / 2; grid-column: 9 / 10;}
+.grid-item-10 { grid-row: 1 / 2; grid-column: 10 / 11;}
+.grid-item-11 { grid-row: 1 / 2; grid-column: 11 / 12;}
+.grid-item-12 { grid-row: 1 / 2; grid-column: 12 / 13;}
+
+figure {
+    /* width: 100%; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+figcaption {
+    width: 130px;
+    height: 40px;
+    background-color: var(--light-black);
+    color: var(--white);
+    position: absolute;
+    /* z-index: 5; */
+    /* top: 50%;
+    left: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
 footer {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--green);
 }
 
+#contact {
+    color: var(--white);
+    /* background-color: var(--green); */
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+address {
+    line-height: 1.5;
+}
+
+#hours dl {
+    color: var(--white);
+    /* background-color: var(--green); */
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#dailySchedule{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+.small {
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 small {
     color: var(--green);
+    margin: 5px 0 15px 0;
+    
 }
 
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
@@ -210,6 +333,50 @@ small {
         justify-content: space-around;
     }
 
+    .items {
+        grid-template-rows: repeat(6, 300px);
+        grid-template-columns: repeat(2, 300px);
+        gap: 50px;
+    }
+    
+    /* Grid Items */
+    .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 2;}
+    .grid-item-2 { grid-column: 2 / 3; grid-row: 1 / 2;}
+    .grid-item-3 { grid-column: 1 / 2; grid-row: 2 / 3;}
+    .grid-item-4 { grid-column: 2 / 3; grid-row: 2 / 3;}
+    .grid-item-5 { grid-column: 1 / 2; grid-row: 3 / 4;}
+    .grid-item-6 { grid-column: 2 / 3; grid-row: 3 / 4;}
+    .grid-item-7 { grid-column: 1 / 2; grid-row: 4 / 5;}
+    .grid-item-8 { grid-column: 2 / 3; grid-row: 4 / 5;}
+    .grid-item-9 { grid-column: 1 / 2; grid-row: 5 / 6;}
+    .grid-item-10 { grid-column: 2 / 3; grid-row: 5 / 6;}
+    .grid-item-11 { grid-column: 1 / 2; grid-row: 6 / 7;}
+    .grid-item-12 { grid-column: 2 / 3; grid-row: 6 / 7;}
+
+    footer {
+        height: 350px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #contact {
+        width: 50%;
+        height: 250px;
+    }
+
+    #hours{
+        width: 50%;
+
+    }
+
+    .small {
+        flex-direction: column;
+        margin-top: 60px;
+        /* align-items: center;
+        justify-content: center; */
+    }
+    
+
 }
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media screen and (min-width: 1280px) {
@@ -219,7 +386,7 @@ small {
 
     }
     .LogoContainer {
-        width: 50%;
+        width: 45%;
         flex-direction: row;
         flex-wrap: wrap;
 
@@ -230,15 +397,34 @@ small {
     }
 
     .NavContainer {
-        width: 50%;
+        width: 45%;
         height:  100px;
         background-color: var(--green);
 
     }
 
+    .items {
+        grid-template-rows: repeat(4, 300px);
+        grid-template-columns: repeat(3, 300px);
+        gap: 50px;
+    }
+
+    footer {
+        justify-content: space-around;
+    }
+
+    #contact {
+        flex-direction: row;
+    }
+
+    #hours dl {
+        flex-direction: row;
+    }
+    
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 
 @media screen and (min-width: 1400px) {
+    
 
 }
