@@ -277,23 +277,20 @@ address {
     line-height: 1.5;
 }
 
-#hours dl {
+
+
+#dailySchedule {
     color: var(--white);
-    /* background-color: var(--green); */
     height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    line-height: 1.5;
 
 }
 
-#dailySchedule{
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+dt {
+    margin-bottom: 10px;
 
 }
 
@@ -335,6 +332,20 @@ small {
         justify-content: space-around;
     }
 
+
+    #contact {
+        margin-top: 35px;
+    }
+    address {
+        padding-bottom: 90px;
+
+    }
+
+    #hours {
+        padding-top: 55px;
+        
+    }
+
     .items {
         grid-template-rows: repeat(6, 300px);
         grid-template-columns: repeat(2, 300px);
@@ -373,7 +384,7 @@ small {
 
     .small {
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 40px;
         /* align-items: center;
         justify-content: center; */
     }
@@ -433,12 +444,22 @@ small {
 
     #contact {
         flex-direction: row;
-    }
-
-    #hours dl {
-        flex-direction: row;
+        margin-top: 0;
     }
     
+    address {
+        padding-bottom: 0;
+
+    }
+
+    #hours {
+        padding-top: 0;
+        
+    }
+
+    #dailySchedule dt{
+        flex-wrap: wrap;
+    }
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 
