@@ -275,6 +275,11 @@ footer {
     margin-bottom: 2px;
 }
 
+#hours dt {
+    margin-right: 8px;
+
+}
+
 .copyright {
     width: 100%;
     background-color: var(--white);
