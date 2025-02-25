@@ -194,7 +194,6 @@ h3{
     margin-top: 10px;
     display: grid;
     grid-template-rows: 300px;
-    /* grid-template-columns: repeat( 12 / 300px); */
     grid-template-columns: 300px;
     grid-auto-columns: 300px;
     row-gap: 50px;
